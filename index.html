@@ -1,0 +1,105 @@
+﻿<head><style>
+	#graph1	{
+	    display:none;
+	}
+	</style>
+	<script>
+	
+	function checkboxclicked() {
+		console.log(document.getElementById('my_checkbox').checked);
+		if(document.getElementById('my_checkbox').checked)
+		{
+			console.log("Checked");
+			document.getElementById('graph1').style.display="block";
+			document.getElementById('graph2').style.display="none";
+		}
+		else {
+			document.getElementById('graph1').style.display="none";
+			document.getElementById('graph2').style.display="block";
+		}
+	}
+		
+		
+	</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Citi Bike Share Service Anaalysis</title>
+    <link rel="stylesheet" href="stylesheet.css">
+<style type="text/css"></style></head> <header>
+    <h1>  &nbsp;  &nbsp; &nbsp; Analysis of NYC Citi Bike Share Service</h1>
+    </header>
+  
+  <div class="wrapper">
+    The Citi Bike Share is a bike sharing service provided in New York City. The data for this service is publicly available <a href="http://citibikenyc.com/system-data">here</a>. It dates back to June 2013 and contains fields like trip time, duration, start and end points and gender and age of the biker using the service.  
+    <h2 class="analysis">Aims of the Project</h2>
+There are two aims for this project:
+<UL>
+   <LI> 1. Formulating an efficient predictive model for the demand of the bike sharing service. 
+   <LI> 2. Predicting the average speed of a bike ride in NYC based on location, time and weather.
+</UL>
+ 
+In the process of formulating predictive models, I will also perform exploratory analysis which will uncover useful information about the customer base of the bike share system. Some exploratory analysis follows. The code used for generating these plots is available on <a href="https://github.com/smargs/projectride">GitHub</a> 
+
+ <hr class="clear"/>
+
+ <div id="fig1">
+</div>
+   <p class="fact">Do seasons influence the bike share demand? </p> <br>
+
+    The month of the year has a considerable influence on the number of bike share customers. Compared to February which is the least popular month, customers increase more than  <strong>five fold</strong> in September. This influence is more pronounced for women bikers. The fraction of customers that are women increases from <strong> 1/6 th in February to 1/4 th in September. </strong> <br><br> <br>
+
+<img style="margin-left: 100px" src="images/gendermonth.png" alt="Smiley face" height="250">
+    <hr class="clear"/>
+     
+   <p class="fact">How does weather influence the bike share demand? </p> <br>
+Weather data for New York City is available from <a href="http//:ncdc.noaa.gov/qclcd/QCLCD">National Centers for Environment Information.</a> The weather data for March 2015 is compared with the bike share demand below. The local dips in the bike share demand are already highlighted. 
+ <br><br>
+ <form>
+ &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input id="my_checkbox" onclick="checkboxclicked()" type="checkbox">Click to remove comparison to the weather conditions for the highlighted days.  </input>
+</form>
+<img style="margin-left: 170px; margin-top: -18px" src="images/weather3.png" width="400px" id="graph2">   
+<img style="margin-left: 170px; margin-top: -18px" src="images/weather2.png" width="401px" id="graph1"> <br>
+At a first glance, influence of snow and rain definitely seems to affect the bike share demand. Although the weather conditions for the last highlighted day are normal apart from low temperatures, this along with the fact that the day was a Sunday could account for the low bike share demand on that day. 
+  
+  <hr class="clear"/>
+  
+   <p class="fact">Who uses the Citi Bike Share service? </p> <br>
+The number of bikers for the entire year are categorized based on their age in the following histogram. There is a noticeable rise in the number of customers above 23 years of age. The service is also used heavily during peak hours. These trends indicate that a major customer base of the service is <strong> working graduates commuting to work</strong>.  <br><br>
+<img style="margin-left: 60px" src="images/age.png" alt="Smiley face" height="220">
+<br> <br>
+
+<img style="margin-left: 180px" src="images/hours.png" alt="Smiley face" height="250">
+
+    <hr class="clear"/>
+  
+ <div id="fig2">
+</div>
+
+   <p class="fact">What is the average speed of the bike ride? </p> <br> 
+  Since most of the bike rides are in the streets of Manhattan which have a grid structure, the distance covered in a ride is roughly equal to the Manhattan distance between the start and end locations. First, all the bike share stations falling in Manhattan are identified using DBSCAN clustering technique. As a first step in determing if there is a  trend in the average speeds of bike rides, a scatter plot of ride duration with respect to distance covered is shown for men and women. 
+  <br> <br>  
+<img style="margin-left: 50px" src="images/manhattan_stats.png" alt="Smiley face" height="380">
+<br><br>
+
+
+
+<br><br>
+The average speed of the bike ride when the customers are men is found to be <strong>8.25 miles/hr </strong> while the average speed of the ride for women is found to be <strong>7.38 miles/hr.</strong> This suggests a trend in the average speed based on the gender of the biker. Of course, this is a first step and a generalization. The influence of peak hours (and resulting heavy traffic) and weather conditions can be used as potential indicators to estimate average speed as well. 
+
+ <hr class="clear"/>
+ <p class="fact">Conclusion</p> <br> 
+The demands for the bike sharing service are strongly influenced by time and weather conditions. The average speed of the bike ride varies with respect to at least one feature. In further analysis, additional features will be used to build the two predictive models. 
+
+
+
+</div>
+  
+  <footer>
+     Design inspired by <a href="http://thfield.github.io/babs/">Babs</a>. Special thanks to Sanika Gangal. 
+  </footer>
+  
+  <script src="js/main.js"></script>
+  <script src="js/indepth.js"></script>
+</body>
+
+</html>
