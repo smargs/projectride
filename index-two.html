@@ -1,0 +1,101 @@
+﻿<head><style>
+	#graph1	{
+	    display:none;
+	}
+	#graph3	{
+	    display:none;
+	}
+	</style>
+	<script>
+	
+	function checkboxclicked() {
+		console.log(document.getElementById('my_checkbox').checked);
+                
+		if(document.getElementById('my_checkbox').checked)
+		{
+			console.log("Checked");
+			document.getElementById('graph1').style.display="block";
+			document.getElementById('graph2').style.display="none"; 
+		}
+		else {
+			document.getElementById('graph1').style.display="none";
+			document.getElementById('graph2').style.display="block"; 
+		}
+      }
+
+	 
+ 
+        	 
+		
+		
+	</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Citi Bike Share Service Anaalysis</title>
+    <link rel="stylesheet" href="stylesheet1.css">
+<style type="text/css"></style></head> <header>
+    <h1>  &nbsp;  &nbsp; &nbsp; Analysis of NYC Citi Bike Share Service</h1>
+    </header>
+  
+  <div class="wrapper">
+     
+
+ <div id="fig1">
+</div>
+   <p class="fact">Influence of Seasons </p>  
+
+ 
+<img style="margin-left: 100px" src="images/gendermonth3.png" alt="Smiley face" height="250">
+ 
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Customers in September five times more than customers in February 
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Ratio of women customers falls down during winter months <br><br>
+     
+<hr>   
+
+<p class="fact">Average speed of the bike ride </p>  <br>
+  
+
+  <br> <br>  
+<img style=" margin-top: -70px" style=" margin-left: 200px" src="images/speed3.png" alt="Smiley face" height="380">
+ 
+<br><br>
+<hr>
+<p class="fact">Predictive Models</p>  <br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Train Gradient Boosted Trees using two types of features: <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1) time based features: hour of day, day of week, working day or not  <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2) weather based features: temperature, humidity, precipitation \medskip <br>
+<br><br>
+<img style=" margin-left: 20px"  src="images/figure_2.png" alt="Smiley face" height="300">
+ <br> <hr>
+ <p class="fact">Redistribution of Bikes</p>  <br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bike data contains list of rides, each associated with a bike id. Location of a bike can be<br> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;determined from this. <br>
+
+<img style=" margin-left: 210px"  src="images/traj1.png" alt="Smiley face" height="200">
+ 
+
+   <br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Heatmap showing number of bikes available at stations throughout a day (September 1, 2015)<br> 
+<br>
+ <form>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input id="my_checkbox" onclick="checkboxclicked()" type="checkbox">Click to highlight stations of type A and B.  </input>
+ 
+</form>
+<img style="margin-left: 100px; margin-top: -18px" src="images/stationclean1.png" width="600px" id="graph2">   
+<img style="margin-left: 100px; margin-top: -18px" src="images/stationab.png" width="600px" id="graph1">   
+<br>
+
+
+</div>
+  
+  <footer>
+      Special thanks to Sanika Gangal. 
+  </footer>
+  
+  <script src="js/main.js"></script>
+  <script src="js/indepth.js"></script>
+</body>
+
+</html>
