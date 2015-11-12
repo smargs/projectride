@@ -43,14 +43,14 @@ footer {
 h1 {
   font-size: 2rem;
   color: #82c7bc;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
 }
 header a {
   font-size: 1.5rem;
   float: right;
   text-decoration: none;
   margin: 0rem 2rem;
-  padding: 5px;
+  padding: 30px;
   color: #fff;
 }
 header a:hover {
