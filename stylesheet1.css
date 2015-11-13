@@ -82,6 +82,7 @@ input[type=radio] {
   font-size: 1.5rem;
   display: inline-block; 
   width: 500px;
+  margin-left: 205px;
   /*padding: 2px;
   margin-left: 192px;
   border: solid #666 3px;
