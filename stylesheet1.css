@@ -21,8 +21,7 @@ body {
   text-decoration: line-through;
 }
 hr {
-  width: 75%;
-  margin: 10px auto;
+  width: 100%; 
 }
 header {
   margin-left: 175px;
