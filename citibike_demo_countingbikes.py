@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-filename = '/Users/Pushkarini/Desktop/dataincubator_work/data/b1509.csv'
+filename = '/data/b1509.csv'
 
 data = pd.read_csv(filename) 
 
