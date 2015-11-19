@@ -11,7 +11,7 @@ from scipy.misc import imread
 ################################################################### 
  
 # extract data from 12 months of bike share rides in nyc
-fna = '/Users/Pushkarini/Desktop/dataincubator_work/data/b'
+fna = '/data/b'
 filelist = [1410,1411,1412,1501,1502,1503,1504,1505,1506,1507,1508,1509]
  
 ###############################################################
