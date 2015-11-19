@@ -3,4 +3,4 @@ The weather data and cike sharing data have already been sorted for this from fo
 http://www.citibikenyc.com/system-data and http://www.ncdc.noaa.gov/qclcd/QCLCD
 
 Step 2: For running other files, the appropriate bike share data files will have to be accessed from 
-http://www.citibikenyc.com/system-data
+http://www.citibikenyc.com/system-data and saved in the data folder.
