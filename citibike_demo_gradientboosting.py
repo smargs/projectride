@@ -5,7 +5,7 @@ import math
 import matplotlib
 import matplotlib.pyplot as plt 
 
-filename = '/Users/Pushkarini/bike_requests_and_weather_summary.csv'
+filename = '/data/bike_requests_and_weather_summary.csv'
 data = pd.read_csv(filename) 
 
 a1 = data[data['month'] == 6].index.tolist(); p1 = a1[0:len(a1)/3]
@@ -58,7 +58,5 @@ axarr[0].text(10,3.5,'data',fontsize=30,color='r')
 axarr[0].text(10,4,'prediction',fontsize=30,color='b')
 plt.show()
  
-    
-    
 
 
