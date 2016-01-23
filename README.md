@@ -4,3 +4,5 @@ http://www.citibikenyc.com/system-data and http://www.ncdc.noaa.gov/qclcd/QCLCD
 
 Step 2: For running other files, the appropriate bike share data files will have to be accessed from 
 http://www.citibikenyc.com/system-data and saved in the data folder.
+
+More information can also be seen at http://smargs.github.io/projectride/
